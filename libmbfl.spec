@@ -1,6 +1,6 @@
 Summary:	Streamable kanji code filter and converter
 Name:		libmbfl
-Version:	0.1
+Version:	1.0
 Release:	0.1
 License:	LGPL
 Group:		Libraries
