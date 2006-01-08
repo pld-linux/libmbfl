@@ -1,4 +1,5 @@
 Summary:	Streamable kanji code filter and converter
+Summary(pl):	Strumieniowy filtr i konwerter kodu kanji
 Name:		libmbfl
 Version:	1.0
 Release:	1
@@ -17,21 +18,33 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is Libmbfl, a streamable multibyte character code filter and
 converter library.
 
+%description -l pl
+libmbfl to biblioteka strumieniowego filtra i konwertera
+wielobajtowych kodów znaków.
+
 %package devel
 Summary:	Header files for libmbfl library
+Summary(pl):	Pliki nag³ówkowe biblioteki libmbfl
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This is the package containing the header files for libmbfl library.
 
+%description devel -l pl
+Ten pakiet zawiera pliki nag³ówkowe biblioteki libmbfl.
+
 %package static
 Summary:	Static libmbfl library
+Summary(pl):	Statyczna biblioteka libmbfl
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libmbfl library.
+
+%description static -l pl
+Statyczna biblioteka libmbfl.
 
 %prep
 %setup -q -n %{name}
@@ -64,9 +77,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/mbfl
+%attr(755,root,root) %{_libdir}/libmbfl.so
 %{_libdir}/libmbfl.la
-%{_libdir}/libmbfl.so
+%{_includedir}/mbfl
 
 %files static
 %defattr(644,root,root,755)
