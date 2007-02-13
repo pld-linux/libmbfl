@@ -1,5 +1,5 @@
 Summary:	Streamable kanji code filter and converter
-Summary(pl.UTF-8):   Strumieniowy filtr i konwerter kodu kanji
+Summary(pl.UTF-8):	Strumieniowy filtr i konwerter kodu kanji
 Name:		libmbfl
 Version:	1.0
 Release:	1
@@ -24,7 +24,7 @@ wielobajtowych kodów znaków.
 
 %package devel
 Summary:	Header files for libmbfl library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libmbfl
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libmbfl
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -36,7 +36,7 @@ Ten pakiet zawiera pliki nagłówkowe biblioteki libmbfl.
 
 %package static
 Summary:	Static libmbfl library
-Summary(pl.UTF-8):   Statyczna biblioteka libmbfl
+Summary(pl.UTF-8):	Statyczna biblioteka libmbfl
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
