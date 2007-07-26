@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# don't build static library
+#
 Summary:	Streamable kanji code filter and converter
 Summary(pl.UTF-8):	Strumieniowy filtr i konwerter kodu kanji
 Name:		libmbfl
@@ -56,7 +60,8 @@ cp %{SOURCE1} mbfl
 %{__autoheader}
 %{__automake}
 %{__autoconf}
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -81,6 +86,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libmbfl.la
 %{_includedir}/mbfl
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libmbfl.a
+%endif
