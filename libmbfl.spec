@@ -1,18 +1,20 @@
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
-#
+
 Summary:	Streamable kanji code filter and converter
 Summary(pl.UTF-8):	Strumieniowy filtr i konwerter kodu kanji
 Name:		libmbfl
-Version:	1.0
+Version:	1.0.2
 Release:	1
-License:	LGPL
+License:	LGPL 2.1
 Group:		Libraries
-Source0:	%{name}.tar.bz2
-# Source0-md5:	6c74e119c341ca655e05222175442722
+# git clone git://github.com/scottmac/libmbfl.git
+# v=1.0.2; tar --exclude-vcs -cjf libmbfl-$v.tar.bz2 libmbfl
+Source0:	%{name}-%{version}.tar.bz2
+# Source0-md5:	9acd08bfc500c6e3153ce40764e04dd7
 Source1:	ftp://ftp.unicode.org/Public/UNIDATA/EastAsianWidth.txt
-# Source1-md5:	ab95687111a50d4375725c0b9dade8d9
+# Source1-md5:	e2ec8af9070c1fb3a069e5c76f3ce939
 Source2:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-1.TXT
 # Source2-md5:	12e09bd6c9c501b55e0f27acaf60c672
 Source3:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-2.TXT
@@ -39,8 +41,10 @@ Source13:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-13.TXT
 # Source13-md5:	f97c84a786088bd85262f57df05408fd
 Source14:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-14.TXT
 # Source14-md5:	b3d2634fb31883aae57fcfeb06436e2b
-Source15:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-16.TXT
-# Source15-md5:	f905f3043c0b8265c64fb80ec9e747c3
+Source15:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-15.TXT
+# Source15-md5:	f807052642f93374e506682793924df0
+Source16:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-16.TXT
+# Source16-md5:	f905f3043c0b8265c64fb80ec9e747c3
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -95,6 +99,7 @@ cp -a %{SOURCE12} filters
 cp -a %{SOURCE13} filters
 cp -a %{SOURCE14} filters
 cp -a %{SOURCE15} filters
+cp -a %{SOURCE16} filters
 
 %build
 %{__libtoolize}
