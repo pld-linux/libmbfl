@@ -43,6 +43,8 @@ Source15:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-15.TXT
 # Source15-md5:	f807052642f93374e506682793924df0
 Source16:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-16.TXT
 # Source16-md5:	f905f3043c0b8265c64fb80ec9e747c3
+Source17:	ftp://ftp.unicode.org/Public/UNIDATA/EmojiSources.txt
+# Source17-md5:	6dc97737e77191ec1db766d9d55cb7c1
 URL:		https://github.com/moriyoshi/libmbfl
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -100,6 +102,7 @@ cp -p %{SOURCE13} filters
 cp -p %{SOURCE14} filters
 cp -p %{SOURCE15} filters
 cp -p %{SOURCE16} filters
+cp -p %{SOURCE17} filters
 
 %build
 %{__libtoolize}
