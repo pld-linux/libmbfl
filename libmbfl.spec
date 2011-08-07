@@ -5,14 +5,12 @@
 Summary:	Streamable kanji code filter and converter
 Summary(pl.UTF-8):	Strumieniowy filtr i konwerter kodu kanji
 Name:		libmbfl
-Version:	1.0.2
+Version:	1.3.1
 Release:	1
 License:	LGPL 2.1
 Group:		Libraries
-# git clone git://github.com/scottmac/libmbfl.git
-# v=1.0.2; tar --exclude-vcs -cjf libmbfl-$v.tar.bz2 libmbfl
-Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	9acd08bfc500c6e3153ce40764e04dd7
+Source0:	https://github.com/moriyoshi/libmbfl/tarball/%{name}-%{version}#/%{name}-%{version}.tgz
+# Source0-md5:	daac832e6579643fb85121ffdaa8d30a
 Source1:	ftp://ftp.unicode.org/Public/UNIDATA/EastAsianWidth.txt
 # Source1-md5:	e2ec8af9070c1fb3a069e5c76f3ce939
 Source2:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-1.TXT
@@ -45,6 +43,7 @@ Source15:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-15.TXT
 # Source15-md5:	f807052642f93374e506682793924df0
 Source16:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-16.TXT
 # Source16-md5:	f905f3043c0b8265c64fb80ec9e747c3
+URL:		https://github.com/moriyoshi/libmbfl
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -83,23 +82,24 @@ Static libmbfl library.
 Statyczna biblioteka libmbfl.
 
 %prep
-%setup -q -n %{name}
-cp -a %{SOURCE1} mbfl
-cp -a %{SOURCE2} filters
-cp -a %{SOURCE3} filters
-cp -a %{SOURCE4} filters
-cp -a %{SOURCE5} filters
-cp -a %{SOURCE6} filters
-cp -a %{SOURCE7} filters
-cp -a %{SOURCE8} filters
-cp -a %{SOURCE9} filters
-cp -a %{SOURCE10} filters
-cp -a %{SOURCE11} filters
-cp -a %{SOURCE12} filters
-cp -a %{SOURCE13} filters
-cp -a %{SOURCE14} filters
-cp -a %{SOURCE15} filters
-cp -a %{SOURCE16} filters
+%setup -qc
+mv moriyoshi-libmbfl-*/* .
+cp -p %{SOURCE1} mbfl
+cp -p %{SOURCE2} filters
+cp -p %{SOURCE3} filters
+cp -p %{SOURCE4} filters
+cp -p %{SOURCE5} filters
+cp -p %{SOURCE6} filters
+cp -p %{SOURCE7} filters
+cp -p %{SOURCE8} filters
+cp -p %{SOURCE9} filters
+cp -p %{SOURCE10} filters
+cp -p %{SOURCE11} filters
+cp -p %{SOURCE12} filters
+cp -p %{SOURCE13} filters
+cp -p %{SOURCE14} filters
+cp -p %{SOURCE15} filters
+cp -p %{SOURCE16} filters
 
 %build
 %{__libtoolize}
