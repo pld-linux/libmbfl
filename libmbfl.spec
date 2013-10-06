@@ -6,12 +6,11 @@ Summary:	Streamable kanji code filter and converter
 Summary(pl.UTF-8):	Strumieniowy filtr i konwerter kodu kanji
 Name:		libmbfl
 Version:	1.3.2
-Release:	2
+Release:	3
 License:	LGPL 2.1
 Group:		Libraries
-#Source0:	https://github.com/moriyoshi/libmbfl/tarball/%{name}-%{version}#/%{name}-%{version}.tgz
-Source0:	https://github.com/moriyoshi/libmbfl/tarball/master/%{name}-%{version}-trunk.tgz
-# Source0-md5:	58d53f172618ea0209424a7f59f269b6
+Source0:	https://github.com/moriyoshi/libmbfl/archive/8d14bff/%{name}-%{version}.tar.gz
+# Source0-md5:	7164a4da714f78dde13c222f855887a3
 Source1:	ftp://ftp.unicode.org/Public/UNIDATA/EastAsianWidth.txt
 # Source1-md5:	e2ec8af9070c1fb3a069e5c76f3ce939
 Source2:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-1.TXT
@@ -86,7 +85,7 @@ Statyczna biblioteka libmbfl.
 
 %prep
 %setup -qc
-mv moriyoshi-libmbfl-*/* .
+mv *libmbfl-*/* .
 cp -p %{SOURCE1} mbfl
 cp -p %{SOURCE2} filters
 cp -p %{SOURCE3} filters
