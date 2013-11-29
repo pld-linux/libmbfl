@@ -6,7 +6,7 @@ Summary:	Streamable kanji code filter and converter
 Summary(pl.UTF-8):	Strumieniowy filtr i konwerter kodu kanji
 Name:		libmbfl
 Version:	1.3.2
-Release:	3
+Release:	4
 License:	LGPL 2.1
 Group:		Libraries
 Source0:	https://github.com/moriyoshi/libmbfl/archive/8d14bff/%{name}-%{version}.tar.gz
