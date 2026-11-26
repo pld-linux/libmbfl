@@ -6,11 +6,11 @@ Summary:	Streamable kanji code filter and converter
 Summary(pl.UTF-8):	Strumieniowy filtr i konwerter kodu kanji
 Name:		libmbfl
 Version:	1.3.2
-Release:	5
+Release:	6
 License:	LGPL 2.1
 Group:		Libraries
-Source0:	https://github.com/moriyoshi/libmbfl/archive/8d14bff/%{name}-%{version}.tar.gz
-# Source0-md5:	7164a4da714f78dde13c222f855887a3
+Source0:	https://github.com/moriyoshi/libmbfl/archive/5b42682/%{name}-%{version}.tar.gz
+# Source0-md5:	72829cfb43736b1d86b03cd651557bf4
 Source1:	ftp://ftp.unicode.org/Public/UNIDATA/EastAsianWidth.txt
 # Source1-md5:	e2ec8af9070c1fb3a069e5c76f3ce939
 Source2:	ftp://ftp.unicode.org/Public/MAPPINGS/ISO8859/8859-1.TXT
